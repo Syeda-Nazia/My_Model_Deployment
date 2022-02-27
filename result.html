@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Prediction</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">-->
+</head>
+<body  style="background: #000000;text-align: center;color:#107080">
+	<header>
+		<div class="container">
+			<h2>Sentiment Prediction for your Review is</h2>	
+		</div>
+	</header>
+	<div class="results">		
+	{% if prediction == "Positive"%}
+	<h2 style="color:green;"value="&#U+1F600">Positive</h2>
+	<h1> &#x1F600</h1>
+	{% else %}
+	<h2 style="color:red;"value='&#U+1F643'> Negative </h2>
+	<h1>&#x1F643</h1>
+	{% endif %}
+	<h3>Time taken for prediction: {{ g.request_time() }}</h3>
+	</div>
+
+</body>
+</html>
